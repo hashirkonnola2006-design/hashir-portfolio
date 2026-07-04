@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Space_Grotesk, Sora, Kaushan_Script } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -40,7 +41,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body>{children}</body>
+      <body><Analytics />{children}</body>
     </html>
   );
 }
