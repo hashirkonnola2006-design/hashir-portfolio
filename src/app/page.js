@@ -190,9 +190,58 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className={`${styles.section} ${styles.aboutSection}`}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>
-            About <span className={styles.titleAccent}>Me</span>
-          </h2>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <h2 className={styles.sectionTitle} style={{ marginBottom: 0 }}>
+              About <span className={styles.titleAccent}>Me</span>
+            </h2>
+            <div className={styles.aboutLinkedInWrapper} style={{ margin: 0, position: 'absolute', left: 'calc(50% + 700px)', top: '50%', transform: 'translateY(-50%)' }}>
+              <div className={styles.tooltipContainer}>
+                <span className={styles.tooltip}>
+                  <div className={styles.profile}>
+                    <div className={styles.user}>
+                      <div className={styles.img}>
+                        <Image
+                          src="/profile.jpg"
+                          alt="Hashir Muhiyudheen Konnola"
+                          width={45}
+                          height={45}
+                          className={styles.tooltipProfileImage}
+                        />
+                      </div>
+                      <div className={styles.details}>
+                        <div className={styles.name}>Hashir Muhiyudheen Konnola</div>
+                        <div className={styles.school}>College of Engineering, Thalassery</div>
+                      </div>
+                    </div>
+                    <div className={styles.about}>
+                      CS Student | Building Real Products with AI Tools | Backend Dev in Progress
+                    </div>
+                    <div className={styles.stats}>
+                      <span className={styles.followers}>630 followers</span>
+                      <span className={styles.dot}>•</span>
+                      <span className={styles.connections}>500+ connections</span>
+                    </div>
+                  </div>
+                </span>
+                <a href="https://www.linkedin.com/in/hashir-muhiyudheen-konnola-8342aa1b9/" target="_blank" rel="noopener noreferrer" className={styles.icon} aria-label="LinkedIn">
+                  <div className={styles.layer}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span className={styles.linkedinSVG}>
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                    </span>
+                  </div>
+                  <div className={styles.text}>Connect on LinkedIn</div>
+                </a>
+              </div>
+            </div>
+          </div>
           <p className={styles.sectionSubtitle}>
             Get to know my journey, skills, and what drives me to build great software.
           </p>
@@ -205,54 +254,6 @@ export default function Home() {
               <p>
                 Right now, I'm focusing on building cleaner interfaces and teaching myself more backend systems to handle larger, more reliable codebases. I'm keeping my goals straightforward: build tools that work well, keep shipping code, and learn as I go.
               </p>
-
-              <div className={styles.aboutLinkedInWrapper}>
-                <div className={styles.tooltipContainer}>
-                  <span className={styles.tooltip}>
-                    <div className={styles.profile}>
-                      <div className={styles.user}>
-                        <div className={styles.img}>
-                          <Image
-                            src="/profile.jpg"
-                            alt="Hashir Muhiyudheen Konnola"
-                            width={45}
-                            height={45}
-                            className={styles.tooltipProfileImage}
-                          />
-                        </div>
-                        <div className={styles.details}>
-                          <div className={styles.name}>Hashir Muhiyudheen Konnola</div>
-                          <div className={styles.school}>College of Engineering, Thalassery</div>
-                        </div>
-                      </div>
-                      <div className={styles.about}>
-                        CS Student | Building Real Products with AI Tools | Backend Dev in Progress
-                      </div>
-                      <div className={styles.stats}>
-                        <span className={styles.followers}>630 followers</span>
-                        <span className={styles.dot}>•</span>
-                        <span className={styles.connections}>500+ connections</span>
-                      </div>
-                    </div>
-                  </span>
-                  <a href="https://www.linkedin.com/in/hashir-muhiyudheen-konnola-8342aa1b9/" target="_blank" rel="noopener noreferrer" className={styles.icon} aria-label="LinkedIn">
-                    <div className={styles.layer}>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span className={styles.linkedinSVG}>
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                          <rect x="2" y="9" width="4" height="12"></rect>
-                          <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
-                      </span>
-                    </div>
-                    <div className={styles.text}>Connect on LinkedIn</div>
-                  </a>
-                </div>
-              </div>
 
               <div className={styles.statsGrid}>
                 <div className={styles.statCard}>
@@ -304,6 +305,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+
           {/* Decorative armor — ambient right side depth element */}
           <Image
             src="/armor.png"
@@ -317,7 +319,8 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className={`${styles.section} ${styles.projectsSection}`}>
+      < section id="projects" className={`${styles.section} ${styles.projectsSection}`
+      }>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>
             Featured <span className={styles.titleAccent}>Projects</span>
@@ -371,10 +374,10 @@ export default function Home() {
             })}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Contact Section */}
-      <section id="contact" className={`${styles.section} ${styles.contactSection}`}>
+      < section id="contact" className={`${styles.section} ${styles.contactSection}`}>
         <div className={styles.container}>
 
           {/* Unified header: torii gate accent + heading + subtitle */}
@@ -531,7 +534,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       <footer className={styles.footer}>
         <div className={styles.container}>
@@ -594,6 +597,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
+    </div >
   );
 }

@@ -178,9 +178,9 @@
 /* Decorative armor image — right side of About section */
 .aboutArmorDecor {
   position: absolute;
-  right: -2rem;
-  bottom: 0;
-  width: 460px;
+  left: -2rem;
+  top: 0;
+  width: 400px;
   height: auto;
   opacity: 1;
   mix-blend-mode: screen;
